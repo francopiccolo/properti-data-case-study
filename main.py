@@ -10,6 +10,8 @@ from config import CODES_MAPPING, DIM_CODES, DB_PATH
 def remove_data(folder):
     """Cleans the data folder in order to load a new batch of data"""
     for filename in os.listdir(folder):
+        if filename == '.gitkeep':
+            continue
         file_path = os.path.join(folder, filename)
         if os.path.isfile(file_path) or os.path.islink(file_path):
             os.unlink(file_path)
