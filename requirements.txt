@@ -1,0 +1,5 @@
+sqlalchemy
+camelot-py[base]
+opencv-python
+PyPDF2<3.0
+great_expectations
